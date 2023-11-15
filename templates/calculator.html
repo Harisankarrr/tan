@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Calculator</title>
+</head>
+<body>
+    <h1>Web Calculator</h1>
+    <form action="/calculate" method="post">
+        <input type="text" name="expression" placeholder="Enter calculation (e.g., 1 + 2)">
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+    <h2>Result: {{ result }}</h2>
+    {% endif %}
+    {% if error %}
+    <h2>Error: {{ error }}</h2>
+    {% endif %}
+</body>
+</html>
